@@ -41,3 +41,9 @@ void list_concat(list_t *self, list_t *ref) {
         list_add(self, ref->item[i]);
     }
 }
+
+bool list_find(list_t *self, void *item) {
+    int i; for(i=0; i<self->entries; i++) {
+        if (self->item[i] == item) { return true; }
+    }   return false;
+}
